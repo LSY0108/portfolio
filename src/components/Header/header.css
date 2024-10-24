@@ -1,0 +1,76 @@
+header {
+    position: fixed;
+    left: 20px;
+    top: 60px;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.85s;
+}
+
+header.on {
+    top: 0;
+    opacity: 1;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* 점 없애기 */
+}
+
+li {
+    position: relative;
+    margin-bottom: 10px; /* 간격을 줄임 */
+}
+
+li.active a {
+    background-color: #00bfff; /* 활성화된 메뉴의 배경색 */
+}
+
+li a {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 8px; /* 기본 패딩 */
+    border-radius: 50px; /* 기본 상태에서 둥근 모양 */
+    background: #2b2a2a;
+    transition: all 0.2s;
+    color: #ffffff; /* 글자 색상 설정 */
+    text-decoration: none; /* Remove underline */
+    width: 30px; /* 초기 너비 */
+    height: 30px; /* 초기 높이 */
+}
+
+li:hover a {
+    padding: 8px 15px; /* hover 시 padding 증가 */
+    background-color: #00bfff; /* hover 시 배경색 */
+    transform: scale(1.1); /* hover 시 크기 증가 */
+    width: 100px; /* hover 시 너비 증가 */
+    height: 30px; /* hover 시 높이 증가 */
+}
+
+a i {
+    margin-right: 5px; /* 아이콘과 텍스트 사이 간격 조정 */
+    font-size: 28px; /* 아이콘 폰트 크기 조정 */
+    text-align: center;
+}
+
+a span {
+    font-size: 14px; /* 텍스트 크기 조정 */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease, padding 0.3s ease;
+    opacity: 0; /* 기본 상태에서 텍스트 숨기기 */
+    visibility: hidden; /* 기본 상태에서 텍스트 숨기기 */
+}
+
+li:hover a span {
+    opacity: 1; /* hover 시 텍스트 보이기 */
+    visibility: visible; /* hover 시 텍스트 보이기 */
+}
