@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.styled-home {
+    display: flex;
+    height: 100vh; /* 전체 화면 높이 */
+    overflow: hidden; /* 스크롤 방지 */
+    width: 85%;
+}
+
+.left {
+    flex: 1; /* 왼쪽 섹션 비율 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* 그라데이션 배경 */
+    position: relative;
+}
+
+.color-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.right {
+    flex: 1; /* 오른쪽 섹션 비율 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff; /* 흰색 배경 */
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1); /* 오른쪽 그림자 효과 */
+    transition: background-color 0.3s; /* 배경 색상 전환 */
+    padding: 1rem; /* 패딩 조정 */
+}
+
+.tit-wrap h2 {
+    font-size: 24px; /* 서브 제목 크기 */
+    color: #333; /* 제목 색상 */
+    margin-bottom: 5px; /* 아래 여백 조정 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.tit-wrap h1 {
+    font-size: 36px; /* 제목 크기 */
+    color: #ff7e5f; /* 제목 색상 */
+    margin-bottom: 15px; /* 아래 여백 조정 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.message {
+    display: block; /* 블록으로 표시 */
+    margin-top: 5px; /* 위쪽 여백 조정 */
+    animation: fade 10s infinite; /* 애니메이션 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.tit-wrap p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem; /* 글자 크기 조정 */
+    font-weight: 400;
+    line-height: 1.5; /* 줄 높이 조정 */
+    color: #2c3e50;
+    word-break: keep-all;
+    word-spacing: 1px;
+    padding: 1rem; /* 패딩 조정 */
+    background: rgba(255, 126, 95, 0.1);
+    border-radius: 12px; /* 둥근 모서리 조정 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.more-btn {
+    display: inline-block; /* 인라인 블록으로 표시 */
+    padding: 8px 16px; /* 여백 조정 */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* 버튼 배경 색상 */
+    color: #fff; /* 버튼 글자 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    border-radius: 4px; /* 둥근 모서리 조정 */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* 부드러운 배경색 전환 및 크기 전환 */
+    margin: 15px auto; /* 중앙 정렬 */
+    text-align: center; /* 버튼 텍스트 중앙 정렬 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.more-btn:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f); /* 호버 시 배경 색상 */
+    transform: translateY(-2px); /* 버튼 호버 시 약간 위로 이동 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* PERSONAL INFOS 섹션 스타일 */
+.info-section {
+    background-color: #f9f9f9; /* 배경 색상 */
+    border-radius: 12px; /* 둥근 모서리 */
+    padding: 1rem; /* 패딩 조정 */
+    margin-top: 15px; /* 위쪽 여백 조정 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 조정 */
+    max-width: 300px; /* 최대 너비 조정으로 크기 감소 */
+    margin-left: auto; /* 중앙 정렬 */
+    margin-right: auto; /* 중앙 정렬 */
+    transition: transform 0.3s; /* 호버 시 애니메이션 추가 */
+}
+
+.info-section:hover {
+    transform: translateY(-2px); /* 호버 시 약간 위로 이동 */
+}
+
+.info-section h2 {
+    font-size: 20px; /* 섹션 제목 크기 조정 */
+    color: #333; /* 섹션 제목 색상 */
+    margin-bottom: 10px; /* 아래 여백 조정 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.info-list {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.info-list li {
+    font-size: 0.9rem; /* 리스트 항목 크기 조정 */
+    color: #4a4a4a; /* 리스트 항목 색상 */
+    margin-bottom: 5px; /* 아래 여백 조정 */
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 5px; /* 패딩 조정 */
+    border-radius: 6px; /* 둥근 모서리 조정 */
+    transition: background-color 0.3s; /* 호버 시 색상 전환 */
+    background: rgba(255, 126, 95, 0.05); /* 배경 색상 추가 */
+}
+
+.info-list li:hover {
+    background-color: rgba(255, 126, 95, 0.1); /* 호버 시 배경 색상 변화 */
+}
+
+.info-label {
+    font-weight: 600; /* 글씨 두껍게 */
+    color: #ff7e5f; /* 색상 */
+    margin-right: 0.5rem; /* 오른쪽 여백 조정 */
+    min-width: 70px; /* 최소 너비 조정 */
+}

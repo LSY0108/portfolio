@@ -44,4 +44,9 @@ function Header(props) {
     );
 }
 
+// props.page의 기본값을 'home'으로 설정
+Header.defaultProps = {
+    page: "Home"
+};
+
 export default Header;
