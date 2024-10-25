@@ -30,7 +30,7 @@ li {
 }
 
 li.active a {
-    background-color: #00bfff; /* 활성화된 메뉴의 배경색 */
+    background-color: #8e24aa; /* 활성화된 메뉴의 배경색 */
 }
 
 li a {
@@ -38,7 +38,7 @@ li a {
     align-items: center; /* Center items vertically */
     padding: 8px; /* 기본 패딩 */
     border-radius: 50px; /* 기본 상태에서 둥근 모양 */
-    background: #2b2a2a;
+    background: #4a148c; /* 배경색 조정 */
     transition: all 0.2s;
     color: #ffffff; /* 글자 색상 설정 */
     text-decoration: none; /* Remove underline */
@@ -48,7 +48,7 @@ li a {
 
 li:hover a {
     padding: 8px 15px; /* hover 시 padding 증가 */
-    background-color: #00bfff; /* hover 시 배경색 */
+    background-color: #9c27b0; /* hover 시 배경색 */
     transform: scale(1.1); /* hover 시 크기 증가 */
     width: 100px; /* hover 시 너비 증가 */
     height: 30px; /* hover 시 높이 증가 */
