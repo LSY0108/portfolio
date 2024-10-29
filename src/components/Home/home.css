@@ -5,7 +5,8 @@
     display: flex;
     height: 100vh;
     width: 100%;
-    background-color: #f3e5f5; /* 배경을 연한 보라색으로 변경 */
+    /*background-color: #f3e5f5;*/ /* 배경을 연한 보라색으로 변경 */
+    background-color: white;
     overflow: hidden;
 }
 
@@ -19,7 +20,8 @@
 }
 
 .left {
-    background-color: #6a1b9a; /* 보라색 배경 */
+    /*background-color: #6a1b9a;*/ /* 보라색 배경 */
+    background-color: black;
     color: #fce4ec; /* 텍스트를 연한 분홍색으로 */
     position: relative;
     overflow: hidden;
@@ -31,7 +33,8 @@
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: #ba68c8; /* 더 밝은 보라색 상단 블록 */
+    /*background-color: #ba68c8;*/ /* 더 밝은 보라색 상단 블록 */
+    background-color:black;
 }
 
 .tit-wrap h1 {
@@ -68,8 +71,10 @@
 }
 
 .right {
-    background-color: #fce4ec; /* 오른쪽 섹션 배경을 밝은 분홍색으로 */
-    color: #4a148c; /* 텍스트 색상을 어두운 보라색으로 */
+    /*background-color: #fce4ec;*/ /* 오른쪽 섹션 배경을 밝은 분홍색으로 */
+    background-color: #ffffff;
+    /*color: #4a148c;*/ /* 텍스트 색상을 어두운 보라색으로 */
+    color: black;
 }
 
 .right p {

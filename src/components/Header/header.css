@@ -21,56 +21,58 @@ ul {
     height: 100%;
     margin: 0;
     padding: 0;
-    list-style-type: none; /* 점 없애기 */
+    list-style-type: none;
 }
 
 li {
     position: relative;
-    margin-bottom: 10px; /* 간격을 줄임 */
+    margin-bottom: 10px;
 }
 
 li.active a {
-    background-color: #8e24aa; /* 활성화된 메뉴의 배경색 */
+    background-color: #8e24aa;
 }
+
 
 li a {
     display: flex;
-    align-items: center; /* Center items vertically */
-    padding: 8px; /* 기본 패딩 */
-    border-radius: 50px; /* 기본 상태에서 둥근 모양 */
-    background: #4a148c; /* 배경색 조정 */
+    align-items: center;
+    padding: 8px;
+    border-radius: 50px;
+    background: #4a148c;
     transition: all 0.2s;
-    color: #ffffff; /* 글자 색상 설정 */
-    text-decoration: none; /* Remove underline */
-    width: 30px; /* 초기 너비 */
-    height: 30px; /* 초기 높이 */
+    color: #ffffff;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
 }
 
 li:hover a {
-    padding: 8px 15px; /* hover 시 padding 증가 */
-    background-color: #9c27b0; /* hover 시 배경색 */
-    transform: scale(1.1); /* hover 시 크기 증가 */
-    width: 100px; /* hover 시 너비 증가 */
-    height: 30px; /* hover 시 높이 증가 */
+    padding: 8px 15px;
+    background-color: #9c27b0;
+    transform: scale(1.1);
+    width: 100px;
+    height: 30px;
 }
 
 a i {
-    margin-right: 5px; /* 아이콘과 텍스트 사이 간격 조정 */
-    font-size: 28px; /* 아이콘 폰트 크기 조정 */
+    color: #ffffff;
+    margin-right: 5px;
+    font-size: 28px;
     text-align: center;
 }
 
 a span {
-    font-size: 14px; /* 텍스트 크기 조정 */
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: opacity 0.3s ease, padding 0.3s ease;
-    opacity: 0; /* 기본 상태에서 텍스트 숨기기 */
-    visibility: hidden; /* 기본 상태에서 텍스트 숨기기 */
+    opacity: 0;
+    visibility: hidden;
 }
 
 li:hover a span {
-    opacity: 1; /* hover 시 텍스트 보이기 */
-    visibility: visible; /* hover 시 텍스트 보이기 */
+    opacity: 1;
+    visibility: visible;
 }

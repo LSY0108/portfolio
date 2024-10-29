@@ -13,7 +13,7 @@ function Home(props) {
                     <h1>
                         I'M{" "}
                         <span className="message">
-                            <strong>HYEJU BAN</strong>
+                            <strong>SEUNGYE LEE</strong>
                             <strong>WEB DEVELOPER</strong>
                             <strong>UX/UI PUBLISHER</strong>
                         </span>
@@ -23,7 +23,7 @@ function Home(props) {
             <div className="right">
                 <div className="tit-wrap">
                     <p>
-                        안녕하세요, 저는 반혜주입니다. 😀
+                        안녕하세요, 저는 입니다. 😀
                         <br/>
                         새로운 기술에 관심이 많으며 동료들과의 커뮤니케이션과 상호 피드백 및 리뷰를 좋아합니다. 현재 프론트엔드 개발자로 구직중입니다. 맡은 일에 자부심을 갖고 도전을 경험할 수
                         있는 회사에서 일하고 싶습니다.
