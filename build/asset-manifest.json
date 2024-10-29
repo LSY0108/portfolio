@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.bc04bc82.css",
+    "main.js": "/portfolio/static/js/main.edba1900.js",
+    "index.html": "/portfolio/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.bc04bc82.css",
+    "static/js/main.edba1900.js"
+  ]
+}
