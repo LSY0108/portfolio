@@ -27,15 +27,15 @@
     overflow: hidden;
 }
 
-.color-block {
+/*.color-block {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 50px;
-    /*background-color: #ba68c8;*/ /* 더 밝은 보라색 상단 블록 */
+    !*background-color: #ba68c8;*! !* 더 밝은 보라색 상단 블록 *!
     background-color:black;
-}
+}*/
 
 .tit-wrap h1 {
     font-size: 3rem;

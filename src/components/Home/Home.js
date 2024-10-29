@@ -7,7 +7,7 @@ function Home(props) {
     return (
         <div className="styled-home">
             <div className="left">
-                <div className="color-block"></div>
+                {/*<div className="color-block"></div>*/}
                 <div className="tit-wrap">
                     <h2>HI! HOW ARE YOU?</h2>
                     <h1>
