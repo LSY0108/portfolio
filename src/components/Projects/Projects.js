@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoNodejs, IoLogoGithub, IoLogoReact } from "react-icons/io5";
+import React, { useState, useEffect } from "react";
 import './projects.css';
 
 function Projects() {
@@ -13,46 +12,58 @@ function Projects() {
         setSelectedProject(null);
     };
 
+    useEffect(() => {
+        const handleEsc = (event) => {
+            if (event.key === "Escape") closeModal();
+        };
+        window.addEventListener("keydown", handleEsc);
+        return () => window.removeEventListener("keydown", handleEsc);
+    }, []);
+
     return (
         <div className="projects">
             <h2>My Projects</h2>
             <div className="projects-container">
                 <div className="project-box" onClick={() => openModal({
                     id: 1,
-                    title: 'Smart Plant Management System',
+                    title: 'Smart Plant Management efefefSystem',
                     description: 'A system to monitor and manage plant health using sensors and data analysis.'
                 })}>
-                    Smart Plant Management System
+                    <h3 className="project-title">Smart Plant Management System</h3>
+                    <p className="project-summary">Monitor and manage plant health with data analytics.</p>
+                    <button className="details-button">자세히 보기</button>
                 </div>
+
                 <div className="project-box" onClick={() => openModal({
                     id: 2,
                     title: 'Crop Prediction Analysis',
                     description: 'Predicting crop production based on climate data and historical yield records.'
                 })}>
-                    Crop Prediction Analysis
+                    <h3 className="project-title">Crop Prediction Analysis</h3>
+                    <p className="project-summary">Predict crop production based on climate data.</p>
+                    <button className="details-button">자세히 보기</button>
+                </div>
+
+                <div className="project-box" onClick={() => openModal({
+                    id: 3,
+                    title: 'Wireless Network Project',
+                    description: 'Developing a secure wireless network for data transmission in smart devices.'
+                })}>
+                    <h3 className="project-title">Wireless Network Project</h3>
+                    <p className="project-summary">Secure wireless network for smart devices.</p>
+                    <button className="details-button">자세히 보기</button>
                 </div>
                 <div className="project-box" onClick={() => openModal({
                     id: 3,
                     title: 'Wireless Network Project',
                     description: 'Developing a secure wireless network for data transmission in smart devices.'
                 })}>
-                    Wireless Network Project
+                    <h3 className="project-title">Wireless Netwofefefefefrk Project</h3>
+                    <p className="project-summary">Secure wireless network for smart devices.</p>
+                    <button className="details-button">자세히 보기</button>
                 </div>
-                <div className="project-box" onClick={() => openModal({
-                    id: 3,
-                    title: 'Wireless Network Project',
-                    description: 'Developing a secure wireless network for data transmission in smart devices.'
-                })}>
-                    Wireless Network Project
-                </div>
-                <div className="project-box" onClick={() => openModal({
-                    id: 3,
-                    title: 'Wireless Network Project',
-                    description: 'Developing a secure wireless network for data transmission in smart devices.'
-                })}>
-                    Wireless Network Project
-                </div>
-                {/* 다른 프로젝트를 추가할 수 있습니다. */}
+
+                {/* 추가 프로젝트 박스들 */}
             </div>
 
             {selectedProject && (

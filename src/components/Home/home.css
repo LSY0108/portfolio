@@ -1,11 +1,9 @@
-/* home.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .styled-home {
     display: flex;
     height: 100vh;
     width: 100%;
-    /*background-color: #f3e5f5;*/ /* 배경을 연한 보라색으로 변경 */
     background-color: white;
     overflow: hidden;
 }
@@ -20,50 +18,42 @@
 }
 
 .left {
-    /*background-color: #6a1b9a;*/ /* 보라색 배경 */
-    background-color: black;
-    color: #fce4ec; /* 텍스트를 연한 분홍색으로 */
+    /*background-color: black;*/
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 2); /* 그림자 효과 추가 */
+    border-top-right-radius: 10000px; /* 오른쪽 위 모서리 둥글게 */
+    border-bottom-right-radius: 10000px; /* 오른쪽 아래 모서리 둥글게 */
+    background: linear-gradient(240deg, rgba(0, 0, 50, 300), rgba(0, 0, 0, 20));
 }
 
-/*.color-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    !*background-color: #ba68c8;*! !* 더 밝은 보라색 상단 블록 *!
-    background-color:black;
-}*/
-
 .tit-wrap h1 {
-    font-size: 3rem;
+    font-size: 3.5rem; /* 크기 증가 */
     font-weight: 700;
     margin: 20px 0;
-    color: #fce4ec; /* 제목 색상을 연한 분홍색으로 변경 */
+    color: #fce4ec;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 추가 */
 }
 
 .tit-wrap h2 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* 크기 증가 */
     font-weight: 300;
-    color: #d1c4e9; /* 서브 제목 색상을 연한 보라색으로 */
+    color: #d1c4e9;
 }
 
 .message {
     display: block;
     margin-top: 10px;
-    animation: fade 10s infinite; /* 애니메이션 적용 */
+    animation: fade 10s infinite;
 }
 
 .message strong {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* 크기 증가 */
     line-height: 1.6;
-    color: #f48fb1; /* 메시지 텍스트를 밝은 분홍색으로 변경 */
+    color: #f48fb1;
 }
 
-/* fade 애니메이션 추가 */
 @keyframes fade {
     0%, 100% { opacity: 0; }
     33% { opacity: 1; }
@@ -71,22 +61,25 @@
 }
 
 .right {
-    /*background-color: #fce4ec;*/ /* 오른쪽 섹션 배경을 밝은 분홍색으로 */
-    background-color: #ffffff;
-    /*color: #4a148c;*/ /* 텍스트 색상을 어두운 보라색으로 */
-    color: black;
+    background-color: white; /* 흰색 배경 */
 }
 
 .right p {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* 크기 증가 */
     line-height: 1.8;
     margin-bottom: 30px;
+    padding: 20px; /* 패딩 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+
+    /*이거 할지 안할지 정하기!!*/
+    /*background-color: rgba(255, 255, 255, 0.8); !* 배경색 반투명 처리 *!
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); !* 그림자 효과 추가 *!*/
 }
 
 .section-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* 크기 증가 */
     margin-top: 20px;
-    color: #ec407a; /* 섹션 제목을 밝은 분홍색으로 */
+    color: #ec407a;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -103,23 +96,24 @@
 
 .info-label {
     font-weight: bold;
-    color: #ab47bc; /* 정보 라벨 색상을 보라색으로 */
+    color: black;
     margin-right: 10px;
 }
 
 .more-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #8e24aa; /* 버튼 배경을 보라색으로 */
+    padding: 12px 25px; /* 패딩 증가 */
+    background: linear-gradient(240deg, rgba(0, 0, 120, 300), rgba(0, 0, 0, 20)); /* 왼쪽 배경과 동일한 그라데이션 */
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 25px; /* 둥근 버튼 */
+    transition: background-color 0.3s, transform 0.2s; /* 변환 추가 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 버튼 그림자 추가 */
 }
 
 .more-btn:hover {
-    background-color: #7b1fa2; /* 호버 시 더 어두운 보라색 */
+    background-color: #7b1fa2;
+    transform: translateY(-2px); /* 호버 시 살짝 위로 이동 */
 }

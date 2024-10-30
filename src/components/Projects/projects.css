@@ -15,24 +15,80 @@
     flex-wrap: wrap; /* 여러 줄로 감싸기 */
     justify-content: center; /* 가운데 정렬 */
     align-items: flex-start; /* 세로 정렬 */
+    max-width: 1000px; /* 한 줄에 3개의 박스를 배치할 수 있는 너비 */
     gap: 20px; /* 박스 간의 간격 */
+    margin: 0 auto;
 }
 
 .project-box {
     background-color: #444;
-    color: #f48fb1;
+    color: white;
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
-    width: calc(33.33% - 20px); /* 한 줄에 3개씩 배치하고, 여백을 고려하여 너비 계산 */
-    height: 55vh; /* 높이 조정 */
+    width: 250px; /* 고정 너비 */
+    height: 350px; /* 고정 높이 */
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 18px;
+    transition: background-color 1s;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    position: relative; /* 자식 요소를 절대 위치로 정렬하기 위해 사용 */
 }
 
+.project-title {
+    font-size: 1.5rem; /* 제목의 폰트 크기 */
+    color: white; /* 제목 색상 */
+    padding-bottom: 10px; /* 요약과의 간격을 위한 하단 패딩 */
+    text-align: left; /* 왼쪽 정렬 */
+    transition: transform 0.7s, opacity 0.3s; /* 이동 및 투명도 전환 효과 추가 */
+    align-items: center;
+}
+
+.project-summary {
+    font-size: 1rem; /* 요약 텍스트의 폰트 크기 */
+    color: #bbb; /* 요약 텍스트의 색상 */
+    margin: 0; /* 기본 여백 제거 */
+    padding-top: 10px; /* 제목과의 간격을 위한 상단 패딩 */
+    display: block; /* 기본적으로 블록으로 표시 */
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+.details-button {
+    display: none; /* 기본적으로 버튼 숨기기 */
+    margin-top: 10px; /* 버튼과 제목 사이의 간격 */
+    background-color: transparent; /* 버튼 배경색을 투명으로 설정 */
+    color: black; /* 버튼 글자색 */
+    border: 2px solid white; /* 흰색 테두리 추가 */
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white; /* 버튼 글자색을 흰색으로 설정 */
+}
+
+
+
 .project-box:hover {
-    background-color: #555; /* 호버 효과 */
+    background-color: #333; /* 호버 효과 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* 가장자리 부분을 어둡게 하는 그림자 추가 */
+}
+
+.project-box:hover .project-title {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.project-box:hover .project-summary {
+    display: none; /* 호버 시 요약 숨기기 */
+}
+
+.project-box:hover .details-button {
+    display: block; /* 호버 시 버튼 표시 */
 }
 
 .modal-overlay {
