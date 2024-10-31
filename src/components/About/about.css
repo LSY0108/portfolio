@@ -1,47 +1,92 @@
-.about {
-    background-color: black;
-    color: #f48fb1;
-    text-align: center;
+@font-face {
+    font-family: 'Pretendard-Regular', sans-serif; /* 기본 글꼴 패밀리 추가 */
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif; /* 기본 글꼴 패밀리 추가 */
+}
+
+.styled-about {
+    background-color: white; /* 배경을 흰색으로 설정 */
+    color: #444; /* 텍스트 색상 */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 2rem;
+    align-items: center;
+    padding-top: 2rem; /* 상단 여백 */
+}
+
+.about-container {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    min-height: 100vh; /* 최소 높이를 화면 전체로 설정 */
+}
+
+.about-MainTitle-h2 {
+    font-size: 60px; /* 카테고리 제목 크기 */
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8)); /* 그라데이션 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out; /* 페이드 인 애니메이션 추가 */
+}
+
+.about-SKILLS-h2 {
+    font-size: 35px; /* 카테고리 제목 크기 */
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8)); /* 그라데이션 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out; /* 페이드 인 애니메이션 추가 */
 }
 
 .container {
     border-radius: 15px;
-    height: 500px;
+    height: auto; /* 높이를 자동으로 설정 */
     width: 80vw;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: fadeIn 1s ease-in-out; /* fadeIn 애니메이션 추가 */
+    position: relative; /* 절대 위치가 아닌 상대 위치로 변경 */
+    animation: fadeIn 1s ease-in-out; /* 페이드 인 애니메이션 */
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(-20px); /* 위에서 아래로 나타나기 */
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
+.category-title {
+    margin-bottom: 30px;
+    font-size: 28px; /* 카테고리 제목 크기 */
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8)); /* 그라데이션 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
+    transition: background 0.3s; /* 배경 전환 효과 추가 */
+}
+
 .container > div {
-    /*background-color: #f5f5f5;*/
-    background-color: #444;
+    background-color: #f5f5f5; /* 아이템 배경색 */
     border-radius: 10px;
     padding: 15px;
     transform: translateY(10px);
     opacity: 0;
-    animation: slideIn 0.5s forwards; /* slideIn 애니메이션 추가 */
+    animation: slideIn 0.5s forwards; /* 슬라이드 인 애니메이션 */
 }
 
 @keyframes slideIn {
@@ -53,12 +98,6 @@
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-.container > h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    letter-spacing: 2px;
 }
 
 .icon-title {
@@ -76,19 +115,72 @@
 
 .icon {
     font-size: 36px;
-    margin-right: 8px;
-    color: white;
+    margin-right: 8px; /* 아이콘과 텍스트 간 간격 조정 */
+    color: #2E4963FF; /* 아이콘 색상 */
     align-items: center;
+
 }
 
 .icon-title > h3 {
     font-size: 20px;
-    color: white;
     margin:0;
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8)); /* 그라데이션 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
 }
 
-/* Hover 효과 추가 */
+/* 호버 효과 추가 */
 .icon-title:hover {
     transform: scale(1.1); /* 마우스 오버 시 크기 증가 */
-    color: white; /* 텍스트 색상 변경 */
+}
+
+.section-title {
+    font-size: 2rem; /* 크기 증가 */
+    margin-bottom: 20px; /* 타이틀 아래 여백 추가 */
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8)); /* 그라데이션 색상 설정 */
+    -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+    -webkit-text-fill-color: transparent; /* 텍스트 색상 투명 설정 */
+    text-align: left; /* 왼쪽 정렬 추가 */
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* 왼쪽 정렬 추가 */
+    font-size: 1.5rem; /* 글씨 크기 조정 */
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    text-align: left; /* 왼쪽 정렬 */
+    color: black;
+}
+
+.info-label {
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2rem; /* 글씨 크기 증가 */
+}
+
+.personal-info {
+    display: flex; /* Flexbox를 사용하여 수평 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+    margin: 40px 0; /* 상하 여백 추가 (원하는 대로 조정) */
+    animation: fadeIn 1s ease-in-out; /* 페이드 인 애니메이션 추가 */
+}
+
+.info-text {
+    margin-left: 20px; /* 이미지와 텍스트 간 간격 조정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+.profile-image {
+    width: 300px; /* 원하는 크기로 조정 */
+    height: auto; /* 비율 유지 */
+    border-radius: 50%; /* 원형으로 만들고 싶다면 추가 */
+    margin-left: 20px; /* 텍스트와 이미지 간 간격 조정 */
 }

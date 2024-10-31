@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 .styled-home {
     display: flex;
@@ -19,6 +25,7 @@
 
 .left {
     /*background-color: black;*/
+    flex: 1.5;
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 2); /* 그림자 효과 추가 */
@@ -28,15 +35,15 @@
 }
 
 .tit-wrap h1 {
-    font-size: 3.5rem; /* 크기 증가 */
+    font-size: 4.5rem; /* 크기 증가 */
     font-weight: 700;
-    margin: 20px 0;
+    margin: 30px 0;
     color: #fce4ec;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 추가 */
 }
 
-.tit-wrap h2 {
-    font-size: 2rem; /* 크기 증가 */
+.left-h2 {
+    font-size: 2.5rem; /* 크기 증가 */
     font-weight: 300;
     color: #d1c4e9;
 }
@@ -61,6 +68,7 @@
 }
 
 .right {
+    flex: 1;
     background-color: white; /* 흰색 배경 */
 }
 
@@ -72,32 +80,13 @@
     border-radius: 10px; /* 모서리 둥글게 */
 
     /*이거 할지 안할지 정하기!!*/
-    /*background-color: rgba(255, 255, 255, 0.8); !* 배경색 반투명 처리 *!
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); !* 그림자 효과 추가 *!*/
+    background-color: rgba(255, 255, 255, 0.8);  /*배경색 반투명 처리 */
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  !*그림자 효과 추가 *!*/
 }
 
-.section-title {
-    font-size: 1.8rem; /* 크기 증가 */
-    margin-top: 20px;
-    color: #ec407a;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.info-list li {
-    margin-bottom: 10px;
-}
-
-.info-label {
-    font-weight: bold;
-    color: black;
-    margin-right: 10px;
+.tit-wrap {
+    margin-bottom: 0; /* 이미지와 일정한 간격 */
+    font-family: 'Pretendard-Regular', sans-serif;
 }
 
 .more-btn {
@@ -111,9 +100,19 @@
     border-radius: 25px; /* 둥근 버튼 */
     transition: background-color 0.3s, transform 0.2s; /* 변환 추가 */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 버튼 그림자 추가 */
+    margin-top: 20px; /* 이미지와 일정한 간격 */
 }
 
 .more-btn:hover {
     background-color: #7b1fa2;
     transform: translateY(-2px); /* 호버 시 살짝 위로 이동 */
+}
+
+.right img {
+    max-width: 100%; /* 반응형 너비 */
+    max-height: 250px; /* 최대 높이 설정 */
+    object-fit: cover; /* 이미지 크롭 */
+    display: block;
+    margin-top: 0; /* tit-wrap과 일정한 간격 */
+    margin-bottom: 20px; /* 버튼과 일정한 간격 */
 }

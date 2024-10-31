@@ -22,44 +22,44 @@ function Projects() {
 
     return (
         <div className="projects">
-            <h2>My Projects</h2>
+            <h2 className="projects-MainTitle-h2">My Projects</h2>
             <div className="projects-container">
                 <div className="project-box" onClick={() => openModal({
                     id: 1,
-                    title: 'Smart Plant Management efefefSystem',
-                    description: 'A system to monitor and manage plant health using sensors and data analysis.'
+                    title: '프로젝트 제목',
+                    description: '프로젝트 설명 (프로젝트 사진, 날짜, 설명, 주요 기능 및 특징, 사용 기술 및 언어)'
                 })}>
-                    <h3 className="project-title">Smart Plant Management System</h3>
-                    <p className="project-summary">Monitor and manage plant health with data analytics.</p>
+                    <h3 className="project-title">프로젝트 제목</h3>
+                    <p className="project-summary">프로젝트 간략 설명</p>
                     <button className="details-button">자세히 보기</button>
                 </div>
 
                 <div className="project-box" onClick={() => openModal({
                     id: 2,
-                    title: 'Crop Prediction Analysis',
-                    description: 'Predicting crop production based on climate data and historical yield records.'
+                    title: '프로젝트 제목',
+                    description: '프로젝트 설명 (프로젝트 사진, 날짜, 설명, 주요 기능 및 특징, 사용 기술 및 언어)'
                 })}>
-                    <h3 className="project-title">Crop Prediction Analysis</h3>
-                    <p className="project-summary">Predict crop production based on climate data.</p>
+                    <h3 className="project-title">프로젝트 제목</h3>
+                    <p className="project-summary">프로젝트 간략 설명</p>
                     <button className="details-button">자세히 보기</button>
                 </div>
 
                 <div className="project-box" onClick={() => openModal({
                     id: 3,
-                    title: 'Wireless Network Project',
-                    description: 'Developing a secure wireless network for data transmission in smart devices.'
+                    title: '프로젝트 제목',
+                    description: '프로젝트 설명 (프로젝트 사진, 날짜, 설명, 주요 기능 및 특징, 사용 기술 및 언어)'
                 })}>
-                    <h3 className="project-title">Wireless Network Project</h3>
-                    <p className="project-summary">Secure wireless network for smart devices.</p>
+                    <h3 className="project-title">프로젝트 제목</h3>
+                    <p className="project-summary">프로젝트 간략 설명</p>
                     <button className="details-button">자세히 보기</button>
                 </div>
                 <div className="project-box" onClick={() => openModal({
-                    id: 3,
-                    title: 'Wireless Network Project',
-                    description: 'Developing a secure wireless network for data transmission in smart devices.'
+                    id: 4,
+                    title: '프로젝트 제목',
+                    description: '프로젝트 설명 (프로젝트 사진, 날짜, 설명, 주요 기능 및 특징, 사용 기술 및 언어)'
                 })}>
-                    <h3 className="project-title">Wireless Netwofefefefefrk Project</h3>
-                    <p className="project-summary">Secure wireless network for smart devices.</p>
+                    <h3 className="project-title">프로젝트 제목</h3>
+                    <p className="project-summary">프로젝트 간략 설명</p>
                     <button className="details-button">자세히 보기</button>
                 </div>
 
