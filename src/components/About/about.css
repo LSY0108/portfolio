@@ -190,7 +190,7 @@ body {
     padding: 0;
     margin: 0;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .info-list li {
@@ -221,7 +221,7 @@ body {
 }
 
 .profile-image {
-    width: 300px;
+    width: 280px;
     height: auto;
     border-radius: 50%;
     margin-left: 20px;
@@ -229,4 +229,130 @@ body {
 
 .icon-title:hover {
     transform: translateY(-3px);
+}
+
+
+
+
+
+
+.introduction-section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.about-Introduction-h2 {
+    font-size: 35px;
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px;
+    transition: transform 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 16px 36px;
+}
+
+.experience-title {
+    color: #2E4963;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.experience-org {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: left;
+}
+
+.experience-periods {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.period-item {
+    background-color: #f8f9fa;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #eaeaea;
+}
+
+.period-term {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #2E4963;
+    position: relative;
+}
+
+.period-term::after {
+    content: "•";
+    margin: 0 8px;
+    color: #ccc;
+}
+
+.period-date {
+    color: #666;
+}
+
+.experience-achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.experience-achievements li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.experience-achievements li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2E4963;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .introduction-section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .experience-periods {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .period-item {
+        width: 100%;
+    }
 }

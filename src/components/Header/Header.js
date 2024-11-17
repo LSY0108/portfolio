@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import './header.css';
 
 function Header() {
     const [load, setLoad] = useState(false);
     const [activePage, setActivePage] = useState("home"); // 현재 활성화된 페이지 상태
+    const location = useLocation();
+
+    // 페이지 변경 감지하여 스크롤 처리
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, [location.pathname]); // location.pathname이 변경될 때마다 실행
+
 
     useEffect(() => {
         setActivePage(localStorage.getItem('page'));
@@ -15,8 +25,8 @@ function Header() {
     }, []);
 
     const handlePageClick = (page) => {
-        localStorage.setItem('page',page);
-        setActivePage(page); // 아이콘 클릭 시 활성화된 페이지 상태 업데이트
+        localStorage.setItem('page', page);
+        setActivePage(page);
     };
 
     return (
@@ -40,12 +50,12 @@ function Header() {
                         <span>Projects</span>
                     </RouterLink>
                 </li>
-                <li>
+                {/*<li>
                     <a href="https://github.com/LSY0108" target="_blank" rel="noopener noreferrer" className={activePage === "github" ? "active" : ""}>
                         <i className="fab fa-github"></i>
                         <span>Github</span>
                     </a>
-                </li>
+                </li>*/}
             </ul>
         </header>
     );
