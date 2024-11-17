@@ -116,3 +116,24 @@
     margin-top: 0; /* tit-wrap과 일정한 간격 */
     margin-bottom: 20px; /* 버튼과 일정한 간격 */
 }
+
+
+.contact-info {
+    margin-top: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.contact-info p {
+    color: #f8bbd0;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    width: 20px;
+    color: #f48fb1;
+}

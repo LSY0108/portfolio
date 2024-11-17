@@ -32,30 +32,30 @@ function About(props) {
                                 <h2 className="category-title">{category}</h2>
                                 {category === 'BackEnd' && (
                                     <>
-                                        <Skill icon={<FaJava/>} title="Java"/>
-                                        <Skill icon={<FaPython/>} title="Python"/>
-                                        <Skill icon={<SiSpring/>} title="Spring"/>
-                                        <Skill icon={<FaDatabase/>} title="JPA"/>
+                                        <Skill icon={<FaJava/>} title="Java" level="high"/>
+                                        <Skill icon={<FaPython/>} title="Python" level="medium"/>
+                                        <Skill icon={<SiSpring/>} title="Spring" level="medium"/>
+                                        <Skill icon={<FaDatabase/>} title="JPA" level="medium"/>
                                     </>
                                 )}
                                 {category === 'FrontEnd' && (
                                     <>
-                                        <Skill icon={<IoLogoReact/>} title="React"/>
-                                        <Skill icon={<FaJava/>} title="JSP"/>
-                                        <Skill icon={<IoLogoJavascript/>} title="JavaScript"/>
-                                        <Skill icon={<IoLogoHtml5/>} title="HTML/CSS"/>
+                                        <Skill icon={<IoLogoReact/>} title="React" level="high"/>
+                                        <Skill icon={<FaJava/>} title="JSP" level="medium"/>
+                                        <Skill icon={<IoLogoJavascript/>} title="JavaScript" level="medium"/>
+                                        <Skill icon={<IoLogoHtml5/>} title="HTML/CSS" level="medium"/>
                                     </>
                                 )}
                                 {category === 'Database' && (
                                     <>
-                                        <Skill icon={<GrMysql/>} title="MySQL"/>
-                                        <Skill icon={<GrOracle/>} title="Oracle"/>
+                                        <Skill icon={<GrMysql/>} title="MySQL" level="high"/>
+                                        <Skill icon={<GrOracle/>} title="Oracle" level="low"/>
                                     </>
                                 )}
                                 {category === 'Cooperation' && (
                                     <>
-                                        <Skill icon={<IoLogoGithub/>} title="GitHub"/>
-                                        <Skill icon={<SiNotion/>} title="Notion"/>
+                                        <Skill icon={<IoLogoGithub/>} title="GitHub" level="medium"/>
+                                        <Skill icon={<SiNotion/>} title="Notion" level="high"/>
                                     </>
                                 )}
                             </div>
@@ -67,11 +67,31 @@ function About(props) {
     );
 }
 
-const Skill = ({icon, title }) => (
-    <div className="icon-title">
-        <div className="icon">{icon}</div>
-        <h3>{title}</h3>
-    </div>
-);
+const Skill = ({icon, title, level}) => {
+    const levelHeight = {
+        'high': '100%',
+        'medium': '66%',
+        'low': '33%'
+    };
+
+    return (
+        <div className="icon-title">
+            <div className="icon">{icon}</div>
+            <div className="skill-info">
+                <div className="skill-header">
+                    <h3>{title}</h3>
+                    <div className="skill-level">
+                        <div
+                            className="wave-container"
+                            style={{ height: levelHeight[level] }}
+                        >
+                            <div className="wave"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default About;

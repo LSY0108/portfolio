@@ -19,6 +19,12 @@ function Home(props) {
                             <strong>BACKEND ENGINEER</strong>
                         </span>
                     </h1>
+                    <div className="contact-info">
+                        <p><i className="fas fa-envelope"></i> Email: seungye1209@gmail.com</p>
+                        <p><i className="fas fa-phone"></i> Phone: 010-4063-4420</p>
+                        <p><i className="fas fa-map-marker-alt"></i> Location: Incheon, South Korea</p>
+                        <p><i className="fab fa-github"></i> GitHub: github.com/LSY0108</p>
+                    </div>
                 </div>
             </div>
             <div className="right">
@@ -26,9 +32,13 @@ function Home(props) {
                     <p>
                         안녕하세요, 이승예입니다. 😀
                         <br/>
-                        저는 새로운 기술을 배우고 적용하는 데 열정을 가지고 있습니다.
-                        특히, 동료들과의 원활한 소통과 상호 피드백을 통해 함께 성장하는 과정을 소중히 여깁니다.
-                        다양한 혁신적인 프로젝트에 참여하며, 문제 해결에 기여하고, 실력을 더욱 쌓아가고 싶습니다.
+                        {/*무엇을 잘하는지 또는 무엇이 되고 싶은지 표현을 넣었으면 합*/}
+                        저는 Spring 기반의 백엔드 개발에 관심을 가지고 공부하고 있습니다.
+                        프로젝트를 통해 데이터베이스 설계와 API 개발을 경험했으며, 이 과정에서 문제 해결의 즐거움을 느꼈습니다.
+                        <br/><br/>
+                        새로운 기술을 배우고 적용하는 데 열정을 가지고 있으며,
+                        특히 동료들과 함께 고민하고 성장하는 과정을 소중히 여깁니다.
+                        앞으로도 지속적인 학습과 도전을 통해 신뢰할 수 있는 백엔드 개발자로 성장하고 싶습니다.
                     </p>
                 </div>
                 <img src={Me}/>
