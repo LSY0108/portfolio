@@ -1,14 +1,16 @@
+/* 폰트 */
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
-
+/* 전체 문서에 폰트 적용 */
 body {
     font-family: 'Pretendard-Regular', sans-serif;
 }
 
+/* 전체 About Me 섹션 스타일링 */
 .styled-about {
     background-color: white;
     color: #444;
@@ -20,6 +22,7 @@ body {
     padding-top: 2rem;
 }
 
+/* About Me 컨테이너 스타일링 */
 .about-container {
     text-align: center;
     display: flex;
@@ -29,6 +32,7 @@ body {
     min-height: 100vh;
 }
 
+/* 메인 제목 스타일링 */
 .about-MainTitle-h2 {
     font-size: 60px;
     background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
@@ -37,7 +41,179 @@ body {
     font-weight: bold;
     animation: fadeIn 1s ease-in-out;
 }
+/********************************************
+개인 정보 섹션
+*******************************************/
+/* 개인 정보 섹션 컨테이너 */
+.personal-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 40px 0;
+    animation: fadeIn 1s ease-in-out;
+}
 
+/* 프로필 이미지 스타일링 */
+.profile-image {
+    width: 280px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* 정보 텍스트 스타일링 */
+.info-text {
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* 섹션 제목 스타일 */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+/* 정보 목록 스타일 */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* 정보 리스트 항목 스타일 */
+.info-list li {
+    margin-bottom: 10px;
+    text-align: left;
+    color: black;
+}
+
+/* 정보 레이블 스타일 */
+.info-label {
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+/********************************************
+경력 섹션
+*******************************************/
+.introduction-section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.about-Introduction-h2 {
+    font-size: 35px;
+    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px;
+    transition: transform 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 16px 36px;
+}
+
+.experience-title {
+    color: #2E4963;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.experience-org {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: left;
+}
+
+.experience-periods {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.period-item {
+    background-color: #f8f9fa;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #eaeaea;
+}
+
+.period-term {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #2E4963;
+    position: relative;
+}
+
+.period-term::after {
+    content: "•";
+    margin: 0 8px;
+    color: #ccc;
+}
+
+.period-date {
+    color: #666;
+}
+
+.experience-achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.experience-achievements li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.experience-achievements li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2E4963;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/********************************************
+기술 섹션
+*******************************************/
 .about-SKILLS-h2 {
     font-size: 35px;
     background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
@@ -176,169 +352,8 @@ body {
     min-width: 40px;
 }
 
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: left;
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    font-size: 1.2rem;
-}
-
-.info-list li {
-    margin-bottom: 10px;
-    text-align: left;
-    color: black;
-}
-
-.info-label {
-    font-weight: bold;
-    color: black;
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-
-.personal-info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 40px 0;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.info-text {
-    margin-left: 20px;
-    text-align: left;
-}
-
-.profile-image {
-    width: 280px;
-    height: auto;
-    border-radius: 50%;
-    margin-left: 20px;
-}
-
 .icon-title:hover {
     transform: translateY(-3px);
-}
-
-
-
-
-
-
-.introduction-section {
-    width: 80%;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.about-Introduction-h2 {
-    font-size: 35px;
-    background: linear-gradient(240deg, rgba(0, 0, 100, 1), rgba(0, 0, 0, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.experience-card {
-    background-color: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px;
-    transition: transform 0.3s ease;
-    border: 1px solid #f0f0f0;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 16px 36px;
-}
-
-.experience-title {
-    color: #2E4963;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    text-align: left;
-}
-
-.experience-org {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eaeaea;
-    text-align: left;
-}
-
-.experience-periods {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.period-item {
-    background-color: #f8f9fa;
-    padding: 8px 15px;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid #eaeaea;
-}
-
-.period-term {
-    font-weight: 600;
-    margin-right: 10px;
-    color: #2E4963;
-    position: relative;
-}
-
-.period-term::after {
-    content: "•";
-    margin: 0 8px;
-    color: #ccc;
-}
-
-.period-date {
-    color: #666;
-}
-
-.experience-achievements {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.experience-achievements li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 15px;
-    color: #444;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.experience-achievements li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #2E4963;
-    font-weight: bold;
-    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {

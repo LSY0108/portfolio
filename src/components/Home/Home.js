@@ -7,6 +7,7 @@ import './home.css'; // CSS 파일로 스타일 적용
 function Home(props) {
     return (
         <div className="styled-home">
+            {/* 왼쪽 섹션 */}
             <div className="left">
                 {/*<div className="color-block"></div>*/}
                 <div className="tit-wrap">
@@ -19,6 +20,7 @@ function Home(props) {
                             <strong>BACKEND ENGINEER</strong>
                         </span>
                     </h1>
+                    {/* 연락처 정보 */}
                     <div className="contact-info">
                         <p><i className="fas fa-envelope"></i> Email: seungye1209@gmail.com</p>
                         <p><i className="fas fa-phone"></i> Phone: 010-4063-4420</p>
@@ -27,6 +29,7 @@ function Home(props) {
                     </div>
                 </div>
             </div>
+            {/* 오른쪽 섹션 */}
             <div className="right">
                 <div className="tit-wrap">
                     <p>

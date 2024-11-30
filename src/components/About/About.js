@@ -27,6 +27,7 @@ function About(props) {
             <div className="about-container">
                 <h2 className="about-MainTitle-h2">About Me</h2>
                 <div className="personal-info">
+                    {/* 개인 정보 섹션 */}
                     <img src={Me2} alt="Profile" className="profile-image"/>
                     <div className="info-text">
                         <h2 className="section-title">PERSONAL INFOS</h2>
@@ -45,7 +46,7 @@ function About(props) {
                     </div>
                 </div>
 
-
+                {/* 경력 섹션 */}
                 <div className="introduction-section">
                     <h2 className="about-Introduction-h2">EXPERIENCE</h2>
                     <div className="experience-card">
@@ -67,7 +68,7 @@ function About(props) {
                     </div>
                 </div>
 
-
+                {/* 기술 스택 섹션 */}
                 <h2 className="about-SKILLS-h2">MY SKILLS</h2>
                 <div className="skills-section">
                     <div className="container">
@@ -111,7 +112,9 @@ function About(props) {
     );
 }
 
+// Skill 컴포넌트
 const Skill = ({icon, title, level}) => {
+    // 기술 레벨 설정
     const levelHeight = {
         'high': '100%',
         'medium': '66%',

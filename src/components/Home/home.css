@@ -6,6 +6,7 @@
     font-style: normal;
 }
 
+/* 전체 Home 섹션의 스타일링 */
 .styled-home {
     display: flex;
     height: 100vh;
@@ -14,6 +15,7 @@
     overflow: hidden;
 }
 
+/* 왼쪽, 오른쪽 섹션의 공통 스타일링 */
 .left, .right {
     flex: 1;
     display: flex;
@@ -24,26 +26,25 @@
 }
 
 .left {
-    /*background-color: black;*/
     flex: 1.5;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 2); /* 그림자 효과 추가 */
-    border-top-right-radius: 10000px; /* 오른쪽 위 모서리 둥글게 */
-    border-bottom-right-radius: 10000px; /* 오른쪽 아래 모서리 둥글게 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 2);
+    border-top-right-radius: 10000px;
+    border-bottom-right-radius: 10000px;
     background: linear-gradient(240deg, rgba(0, 0, 50, 300), rgba(0, 0, 0, 20));
 }
 
 .tit-wrap h1 {
-    font-size: 4.5rem; /* 크기 증가 */
+    font-size: 4.5rem;
     font-weight: 700;
     margin: 30px 0;
     color: #fce4ec;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 그림자 추가 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .left-h2 {
-    font-size: 2.0rem; /* 크기 증가 */
+    font-size: 2.0rem;
     font-weight: 300;
     color: #d1c4e9;
 }
@@ -56,7 +57,7 @@
 
 .message strong {
     display: block;
-    font-size: 1.8rem; /* 크기 증가 */
+    font-size: 1.8rem;
     line-height: 1.6;
     color: #f48fb1;
 }
@@ -66,57 +67,6 @@
     33% { opacity: 1; }
     66% { opacity: 1; }
 }
-
-.right {
-    flex: 1;
-    background-color: white; /* 흰색 배경 */
-}
-
-.right p {
-    font-size: 1.1rem; /* 크기 증가 */
-    line-height: 1.8;
-    margin-bottom: 30px;
-    padding: 20px; /* 패딩 추가 */
-    border-radius: 10px; /* 모서리 둥글게 */
-
-    /*이거 할지 안할지 정하기!!*/
-    background-color: rgba(255, 255, 255, 0.8);  /*배경색 반투명 처리 */
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  !*그림자 효과 추가 *!*/
-}
-
-.tit-wrap {
-    margin-bottom: 0; /* 이미지와 일정한 간격 */
-    font-family: 'Pretendard-Regular', sans-serif;
-}
-
-.more-btn {
-    display: inline-block;
-    padding: 12px 25px; /* 패딩 증가 */
-    background: linear-gradient(240deg, rgba(0, 0, 120, 300), rgba(0, 0, 0, 20)); /* 왼쪽 배경과 동일한 그라데이션 */
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px; /* 둥근 버튼 */
-    transition: background-color 0.3s, transform 0.2s; /* 변환 추가 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 버튼 그림자 추가 */
-    margin-top: 20px; /* 이미지와 일정한 간격 */
-}
-
-.more-btn:hover {
-    background-color: #7b1fa2;
-    transform: translateY(-2px); /* 호버 시 살짝 위로 이동 */
-}
-
-.right img {
-    max-width: 100%; /* 반응형 너비 */
-    max-height: 250px; /* 최대 높이 설정 */
-    object-fit: cover; /* 이미지 크롭 */
-    display: block;
-    margin-top: 0; /* tit-wrap과 일정한 간격 */
-    margin-bottom: 20px; /* 버튼과 일정한 간격 */
-}
-
 
 .contact-info {
     margin-top: 20px;
@@ -137,3 +87,52 @@
     width: 20px;
     color: #f48fb1;
 }
+
+.right {
+    flex: 1;
+    background-color: white;
+}
+
+.right p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tit-wrap {
+    margin-bottom: 0;
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(240deg, rgba(0, 0, 120, 300), rgba(0, 0, 0, 20));
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.more-btn:hover {
+    background-color: #7b1fa2;
+    transform: translateY(-2px);
+}
+
+.right img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+

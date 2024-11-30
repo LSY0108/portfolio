@@ -62,18 +62,6 @@
     text-align: left;
 }
 
-.details-button {
-    display: none;
-    margin-top: 10px;
-    background-color: transparent;
-    color: #444;
-    border: 2px solid #444;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
 .project-box:hover {
     background-color: #e0e0e0;
     display: flex;
@@ -90,7 +78,19 @@
     display: block;
 }
 
-/* 모달 스타일 수정 */
+.details-button {
+    display: none;
+    margin-top: 10px;
+    background-color: transparent;
+    color: #444;
+    border: 2px solid #444;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 모달 스타일 */
 .modal-overlay {
     position: fixed;
     top: 0;
