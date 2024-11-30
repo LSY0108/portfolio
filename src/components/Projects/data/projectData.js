@@ -107,7 +107,7 @@ export const projectData = {
     },
     bigdata: {
         id: 4,
-        title: '기후변화와 쌀 생산량 분석',
+        title: '기후변화에 따른 쌀 생산량 분석 및 예측',
         githubUrl: 'https://github.com/LSY0108/BigData-Project',
         period: '2024.10 ~ 2023.12',
         intro: '기후 변화가 국내 주요 쌀 생산지의 생산량에 미치는 영향을 분석하고 미래 생산량을 예측하는 프로젝트입니다.',
