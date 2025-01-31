@@ -44,7 +44,7 @@ export const projectData = {
         id: 2,
         title: 'Bloom(의류 쇼핑몰)',
         githubUrl: 'https://github.com/LSY0108/Bloom',
-        period: '2023.09 ~ 2024.12',
+        period: '2023.09 ~ 2023.12',
         intro: '현대 소비자들의 온라인 쇼핑 니즈를 충족시키기 위한 의류 쇼핑몰 웹사이트입니다. 사용자 중심의 UI/UX를 통해 편리한 쇼핑 경험을 제공하며, 다양한 의류 상품을 효율적으로 탐색하고 구매할 수 있습니다.',
         summary: 'Spring Boot와 React를 활용한 의류 쇼핑몰 웹사이트',
         features: [
@@ -109,7 +109,7 @@ export const projectData = {
         id: 4,
         title: '기후변화에 따른 쌀 생산량 분석 및 예측',
         githubUrl: 'https://github.com/LSY0108/BigData-Project',
-        period: '2024.10 ~ 2023.12',
+        period: '2024.10 ~ 2024.12',
         intro: '기후 변화가 국내 주요 쌀 생산지의 생산량에 미치는 영향을 분석하고 미래 생산량을 예측하는 프로젝트입니다.',
         summary: '기후 변화가 국내 주요 쌀 생산지의 생산량에 미치는 영향 분석 및 예측 프로젝트',
         features: [
@@ -132,6 +132,7 @@ export const projectData = {
             tools: ['Jupyter Notebook']
         }
     },
+
     portfolio: {
         id: 5,
         title: 'Portfolio',
